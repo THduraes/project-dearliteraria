@@ -18,22 +18,16 @@ import java.util.Objects;
         private String author;
         private String genre;
         private String imgUrl;
-
         @Column(name = "book_year")
         private Integer year;
 
-       @Column(columnDefinition = "TEXT")
-       private String descri;
-       private Integer assessment;
-        public Books(Long id, String title, String author, String genre, String imgUrl, Integer year, Integer assessment, String descri) {
+        public Books(Long id, String title, String author, String genre, String imgUrl, Integer year, String descri) {
             this.id = id;
             this.title = title;
             this.author = author;
             this.genre = genre;
             this.imgUrl = imgUrl;
             this.year = year;
-            this.assessment = assessment;
-            this.descri = descri;
         }
 
         public Books() {
