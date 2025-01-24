@@ -1,7 +1,6 @@
 package com.dearliteraria.first_spring_app.controllers;
 
 import com.dearliteraria.first_spring_app.dto.BooksMinDto;
-import com.dearliteraria.first_spring_app.entities.Books;
 import com.dearliteraria.first_spring_app.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

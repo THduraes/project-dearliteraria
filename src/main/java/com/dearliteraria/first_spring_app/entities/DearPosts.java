@@ -14,20 +14,26 @@ import java.util.Objects;
 public class DearPosts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
+
+    @Column(columnDefinition = "TEXT")
     private String shortReview;
     private Integer user_id;
-    private String Review;
+
+    @Column(columnDefinition = "TEXT")
+    private String review;
+
+    @Column(columnDefinition = "TEXT")
     private String obs;
 
     public DearPosts(){
     }
 
-    public DearPosts(Integer id, String shortReview, Integer user_id, String review, String obs) {
+    public DearPosts(Long id, String shortReview, Integer user_id, String review, String obs) {
         this.id = id;
         this.shortReview = shortReview;
         this.user_id = user_id;
-        Review = review;
+        this.review = review;
         this.obs = obs;
     }
 
