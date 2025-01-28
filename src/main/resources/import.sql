@@ -1,4 +1,4 @@
-INSERT INTO tb_users (username, password_hash, nickname) VALUES  ('Tamires', 'totozinho', 'tatazinha');
+INSERT INTO tb_users (username, password_hash, nickname) VALUES  ('Tamires', 'guizinlindo', 'tatazinha');
 INSERT INTO tb_users (username, password_hash, nickname) VALUES  ('Maria Rosa', 'robertolindo', 'MariaRosa');
 
 
@@ -18,4 +18,5 @@ INSERT INTO tb_posts(short_review, user_id, review, obs) VALUES ('Orgulho e Prec
 
 
 INSERT INTO tb_belonging (book_id, posts_id, rating) VALUES (6,1,3);
+INSERT INTO tb_belonging (book_id, posts_id, rating) VALUES (4,1,5);
 INSERT INTO tb_belonging (book_id, posts_id, rating) VALUES (4,2,4);

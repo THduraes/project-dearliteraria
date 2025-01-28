@@ -2,9 +2,11 @@ package com.dearliteraria.first_spring_app.services;
 
 
 import com.dearliteraria.first_spring_app.dto.BooksMinDto;
+import com.dearliteraria.first_spring_app.dto.DearUsersMinDto;
 import com.dearliteraria.first_spring_app.dto.PostsDTO;
 import com.dearliteraria.first_spring_app.entities.Books;
 import com.dearliteraria.first_spring_app.entities.DearPosts;
+import com.dearliteraria.first_spring_app.projections.PostsMinProjection;
 import com.dearliteraria.first_spring_app.repositories.BookRepository;
 import com.dearliteraria.first_spring_app.repositories.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,4 +33,6 @@ public class PostsService {
         List<DearPosts> result = postsRepository.findAll();
         return result.stream().map(x-> new PostsDTO(x)).toList();
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.dearliteraria.first_spring_app.dto;
 
 import com.dearliteraria.first_spring_app.entities.DearPosts;
+import com.dearliteraria.first_spring_app.projections.PostsMinProjection;
 import lombok.Getter;
 
 @Getter
@@ -22,4 +23,12 @@ public class PostsDTO {
         this.review = entity.getReview();
         this.obs = entity.getObs();
     }
+
+   /* public PostsDTO(PostsMinProjection projection){
+        this.id = projection.getId();
+        this.shortReview = projection.();
+        this.user_id = projection.getUser_id();
+        this.review = entity.getReview();
+        this.obs = entity.getObs();
+    }*/
 }

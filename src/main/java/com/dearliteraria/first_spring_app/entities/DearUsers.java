@@ -14,19 +14,27 @@ import java.util.Objects;
 public class DearUsers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String username;
     private String passwordHash;
     private String nickname;
+    private String description;
 
     public DearUsers(){
 
     }
-    public DearUsers(int id, String username, String password, String nickname) {
+    public DearUsers(Long id, String username, String password, String nickname) {
         this.id = id;
         this.username = username;
         this.passwordHash = hashPassword(password);
         this.nickname = nickname;
+    }
+    public DearUsers(Long id, String username, String password, String nickname, String description) {
+        this.id = id;
+        this.username = username;
+        this.passwordHash = hashPassword(password);
+        this.nickname = nickname;
+        this.description = description;
     }
 
     private String hashPassword(String password) {
@@ -57,6 +65,7 @@ public class DearUsers {
                 ", username='" + username + '\'' +
                 ", passwordHash='" + passwordHash + '\'' +
                 ", nickname='" + nickname + '\'' +
+                ", descripition='"+ description + '\''+
                 '}';
     }
 }
